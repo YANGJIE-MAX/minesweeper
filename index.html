@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>离线扫雷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>扫雷游戏</h1>
+        
+        <div class="difficulty-selector">
+            <button class="diff-btn active" data-difficulty="easy">初级</button>
+            <button class="diff-btn" data-difficulty="medium">中级</button>
+            <button class="diff-btn" data-difficulty="hard">高级</button>
+        </div>
+
+        <div class="game-info">
+            <div class="counter">
+                <span class="label">剩余地雷:</span>
+                <span class="mine-count" id="mineCount">0</span>
+            </div>
+            
+            <button class="reset-btn" id="resetBtn" onclick="resetGame()">
+                😊
+            </button>
+            
+            <div class="counter">
+                <span class="label">时间:</span>
+                <span class="time-count" id="timeCount">0</span>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="status" id="status">点击格子开始游戏</div>
+
+        <div class="instructions">
+            <h3>游戏说明</h3>
+            <ul>
+                <li>左键点击：揭开格子</li>
+                <li>右键点击：标记/取消标记地雷</li>
+                <li>双击：快速揭开周围格子</li>
+                <li>揭开所有非地雷格子即可获胜</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
